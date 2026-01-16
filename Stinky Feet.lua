@@ -28,7 +28,7 @@ local function autoHatchFunction()
         task.wait()
         local args = {
             eggType,
-            3
+            eggAmount
         }
         game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Egg"):InvokeServer(unpack(args))
     end
