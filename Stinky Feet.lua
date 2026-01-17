@@ -1,4 +1,4 @@
--- Made by Zyrkon_Vaalix
+-- Made by Zyrkon_Vaalix/TheVoid2053
 -- Roblox game: https://www.roblox.com/games/135073499041900/Anime-Feet-Simulator-X
 
 local autoClickerToggle = false
@@ -7,6 +7,14 @@ local autoHatchToggle = false
 
 local eggType = "Waifu Egg" 
 local eggAmount = 1
+
+local eggs = game:GetService("Workpsace").Map.Eggs
+local eggsFolderChildren = eggs:GetChildren()
+local eggTypes = {}
+
+for _, i in pairs(eggsFolderChildren) do
+    table.insert(eggTypes, i.Name)
+end
 
 -- Functions
 local function autoClickerFunction()
@@ -78,7 +86,7 @@ local autoRebirth = main:CreateToggle('Auto Rebirth', false, Color3.fromRGB(0, 1
     end
 end)
 
-local eggSelection = main:CreateTextbox('Egg Type', eggType, function(Value)
+local eggTypeDropdown = main:CreateDropdown('Egg Type', eggTypes, eggType, 0.25, function(Value)
     eggType = Value
 end)
 
