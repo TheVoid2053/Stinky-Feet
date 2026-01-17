@@ -8,7 +8,7 @@ local autoHatchToggle = false
 local eggType = "Waifu Egg" 
 local eggAmount = 1
 
-local eggs = game:GetService("Workpsace").Map.Eggs
+local eggs = game:GetService("Workspace").Map.Eggs
 local eggsFolderChildren = eggs:GetChildren()
 local eggTypes = {}
 
